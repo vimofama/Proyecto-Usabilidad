@@ -1,0 +1,97 @@
+<main class="p-4 max-w-sm md:max-w-3xl mx-auto lg:max-w-6xl">
+  <section>
+    <h1
+      class="bg-red-600 text-red-50 text-2xl font-semibold p-4 rounded-md text-center"
+    >
+      Generar Factura
+    </h1>
+  </section>
+
+  <section class="my-4">
+    <h2 class="text-2xl font-bold mb-4">Consultar viaje</h2>
+    <form class="border rounded-md border-black w-full mx-auto">
+      <div>
+        <div class="flex flex-col lg:flex-row p-2 my-2">
+          <div class="lg:w-1/2 w-full mb-4">
+            <label for="origen">Origen</label>
+            <input
+              class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
+              id="origen"
+              type="text"
+              placeholder="Origen"
+            />
+          </div>
+
+          <div class="lg:w-1/2 w-full mb-4">
+            <label for="destino">Destino</label>
+            <input
+              class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
+              id="destino"
+              type="text"
+              placeholder="Destino"
+            />
+          </div>
+
+          <div class="lg:w-1/2 w-full mb-4">
+            <label for="factura">Nro. Factura</label>
+            <input
+              class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
+              id="factura"
+              type="number"
+              min="1"
+              max="10"
+            />
+          </div>
+
+          <div class="lg:w-1/2 w-full mb-2">
+            <label for="cedula">Cédula</label>
+            <input
+              class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
+              id="cedula"
+              type="number"
+              min="1"
+              max="10"
+            />
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button
+            class="bg-yellow-400 rounded-md mt-2 w-48 my-2 md:h-8"
+            type="submit"
+          >
+            Consultar
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="my-4 p-4 overflow-x-auto">
+    <h2 class="text-2xl font-bold mb-4">Comprobantes</h2>
+    <div class="w-full overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-300 text-center">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Nombre</th>
+            <th class="py-2 px-4 border-b">Número</th>
+            <th class="py-2 px-4 border-b">Fecha</th>
+            <th class="py-2 px-4 border-b">Valor</th>
+            <th class="py-2 px-4 border-b">Documento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2 px-4 border-b">Mateo Morales</td>
+            <td class="py-2 px-4 border-b">003001652715</td>
+            <td class="py-2 px-4 border-b">12/12/2023</td>
+            <td class="py-2 px-4 border-b">$5,50</td>
+            <td class="py-2 px-4 border-b">
+              <button class="bg-yellow-400 px-2 py-1 rounded">Descargar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
