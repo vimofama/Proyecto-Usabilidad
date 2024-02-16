@@ -13,22 +13,22 @@ const i18n = getI18N({ currentLocale: lang });
 
 <main>
   <section class="flex flex-col items-center">
-    <h2 class="text-xl font-semibold my-2 lg:text-2xl lg:my-6">
+    <h2 class="text-xl font-semibold my-2 lg:text-2xl lg:my-6" tabindex="0">
       {i18n.HOME.SECCION1.TITLE}
     </h2>
-    <form class="border rounded-md border-black w-80 lg:w-240 lg:h-60">
+    <form class="border rounded-md border-black w-80 lg:w-240 lg:h-60" tabindex="0">
       <div
         class="flex items-center justify-center lg:justify-start lg:ml-11 lg:mt-4 lg:text-2xl"
       >
         <input class="lg:w-8 lg:h-8 lg:mr-2" id="ida" type="radio" />
-        <label for="ida">{i18n.HOME.SECCION1.IDA}</label>
+        <label for="ida" tabindex="0">{i18n.HOME.SECCION1.IDA}</label>
 
         <input
           class="ml-5 lg:w-8 lg:h-8 lg:mr-2"
           id="ida-vuelta"
           type="radio"
         />
-        <label for="ida-vuelta">{i18n.HOME.SECCION1.VUELTA}</label>
+        <label for="ida-vuelta" tabindex="0">{i18n.HOME.SECCION1.VUELTA}</label>
       </div>
 
       <div class="flex flex-col lg:flex-row p-2 my-2 lg:mt-11 lg:gap-3">
@@ -115,54 +115,61 @@ const i18n = getI18N({ currentLocale: lang });
   <section class="flex flex-col items-center">
     <h2
       class="border rounded-md border-black w-24 text-center font-semibold text-xl mx-auto lg:text-3xl lg:w-40 lg:h-14 lg:py-2 lg:mt-2"
+      tabindex="0"
     >
       {i18n.HOME.SECCION3.TITLE}
     </h2>
     <div class="w-80 my-2 lg:flex lg:w-240 lg:gap-11 lg:mt-6">
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
+        tabindex="0"
       >
         <Image
           src={ambato}
           alt={i18n.HOME.SECCION3.NOTICIA1.IMG_ALT}
           class={"rounded-md lg:h-32"}
+          tabindex="0"
         />
-        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
+        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA1.TITLE}
         </h3>
-        <p class="text-justify">
+        <p class="text-justify" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA1.DESCRIPCION}
         </p>
       </article>
 
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
+        tabindex="0"
       >
         <Image
           src={guayaquil}
           alt={i18n.HOME.SECCION3.NOTICIA2.IMG_ALT}
           class={"rounded-md lg:h-32"}
+          tabindex="0"
         />
-        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
+        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA2.TITLE}
         </h3>
-        <p class="text-justify">
+        <p class="text-justify" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA2.DESCRIPCION}
         </p>
       </article>
 
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
+        tabindex="0"
       >
         <Image
           src={manta}
           alt={i18n.HOME.SECCION3.NOTICIA3.IMG_ALT}
           class={"rounded-md lg:h-32"}
+          tabindex="0"
         />
-        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
+        <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA3.TITLE}
         </h3>
-        <p class="text-justify">
+        <p class="text-justify" tabindex="0">
           {i18n.HOME.SECCION3.NOTICIA3.DESCRIPCION}
         </p>
       </article>

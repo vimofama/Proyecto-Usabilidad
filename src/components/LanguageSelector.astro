@@ -1,44 +1,47 @@
 ---
-import ChevronIcon from "./icons/Chevron.astro"
-import { LANGUAGES } from '../i18n/ui';
-import { getRouteFromUrl, useTranslatedPath, getLangFromUrl } from '../i18n/utils';
+import ChevronIcon from "./icons/Chevron.astro";
+import { LANGUAGES } from "../i18n/ui";
+import {
+  getRouteFromUrl,
+  useTranslatedPath,
+  getLangFromUrl,
+} from "../i18n/utils";
 
 const route = getRouteFromUrl(Astro.url);
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 
-const currentLocaleData = LANGUAGES[lang]
+const currentLocaleData = LANGUAGES[lang];
 const otherLocales = Object.values(LANGUAGES).filter(
   (locale) => locale.code !== lang
-)
+);
 ---
 
 <div class="relative inline-block text-left">
   <div
-    class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
+    class="group text-gray-800 rounded-md text-xs font-semibold bg-gray-300 hover:bg-gray-200 transition-colors"
   >
     <button
+      id="languageButton"
       type="button"
       class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
       aria-expanded="true"
       aria-haspopup="true"
     >
-      <!-- <img src={currentLocaleData.flag} /> -->
       {currentLocaleData.name}
       <ChevronIcon />
     </button>
     <ul
+      id="languageMenu"
       class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
     >
       {
         otherLocales.map((locale) => (
-
           <li class="py-[2px]">
             <a
-              class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={translatePath(`/${route ? route : ''}`, locale.code)}
+              class="rounded-md bg-gray-300 hover:bg-gray-200 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+              href={translatePath(`/${route ? route : ""}`, locale.code)}
             >
-              {/* <img src={locale.flag} /> */}
               {locale.name}
             </a>
           </li>
@@ -47,3 +50,29 @@ const otherLocales = Object.values(LANGUAGES).filter(
     </ul>
   </div>
 </div>
+
+<script>
+  const languageButton = document.getElementById("languageButton");
+  const languageMenu = document.getElementById("languageMenu");
+
+  languageButton?.addEventListener("click", toggleDropdown);
+  languageButton?.addEventListener("keydown", handleKeyDown);
+
+  function toggleDropdown(event : any) {
+    const isExpanded = languageButton?.getAttribute("aria-expanded") === "true";
+
+    if (isExpanded) {
+      languageButton.setAttribute("aria-expanded", "false");
+      languageMenu?.classList.add("hidden");
+    } else {
+      languageButton?.setAttribute("aria-expanded", "true");
+      languageMenu?.classList.remove("hidden");
+    }
+  }
+
+  function handleKeyDown(event: any) {
+    if (event.key === "Enter" || event.key === " ") {
+      toggleDropdown(event);
+    }
+  }
+</script>

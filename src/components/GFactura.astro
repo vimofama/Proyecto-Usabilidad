@@ -10,14 +10,15 @@ const i18n = getI18N({ currentLocale: lang });
   <section>
     <h1
       class="bg-red-600 text-red-50 text-2xl font-semibold p-4 rounded-md text-center"
+      tabindex="0"
     >
       {i18n.FACTURA.SECCION1.TITLE}
     </h1>
   </section>
 
   <section class="my-4">
-    <h2 class="text-2xl font-bold mb-4">{i18n.FACTURA.SECCION2.TITLE}</h2>
-    <form class="border rounded-md border-black w-full mx-auto">
+    <h2 class="text-2xl font-bold mb-4" tabindex="0">{i18n.FACTURA.SECCION2.TITLE}</h2>
+    <form class="border rounded-md border-black w-full mx-auto" tabindex="0">
       <div>
         <div class="flex flex-col lg:flex-row p-2 my-2">
           <div class="lg:w-1/2 w-full mb-4">
@@ -76,25 +77,25 @@ const i18n = getI18N({ currentLocale: lang });
   </section>
 
   <section class="my-4 p-4 overflow-x-auto">
-    <h2 class="text-2xl font-bold mb-4">{i18n.FACTURA.SECCION3.TITLE}</h2>
+    <h2 class="text-2xl font-bold mb-4" tabindex="0">{i18n.FACTURA.SECCION3.TITLE}</h2>
     <div class="w-full overflow-x-auto">
-      <table class="min-w-full bg-white border border-gray-300 text-center">
+      <table class="min-w-full bg-white border border-gray-300 text-center" tabindex="0">
         <thead>
           <tr>
-            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.NAME}</th>
-            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.NUMERO}</th>
-            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.FECHA}</th>
-            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.VALOR}</th>
-            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.DOCUMENTO}</th
+            <th class="py-2 px-4 border-b" tabindex="0">{i18n.FACTURA.SECCION3.NAME}</th>
+            <th class="py-2 px-4 border-b" tabindex="0">{i18n.FACTURA.SECCION3.NUMERO}</th>
+            <th class="py-2 px-4 border-b" tabindex="0">{i18n.FACTURA.SECCION3.FECHA}</th>
+            <th class="py-2 px-4 border-b" tabindex="0">{i18n.FACTURA.SECCION3.VALOR}</th>
+            <th class="py-2 px-4 border-b" tabindex="0">{i18n.FACTURA.SECCION3.DOCUMENTO}</th
             >
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="py-2 px-4 border-b">Mateo Morales</td>
-            <td class="py-2 px-4 border-b">003001652715</td>
-            <td class="py-2 px-4 border-b">12/12/2023</td>
-            <td class="py-2 px-4 border-b">$5,50</td>
+            <td class="py-2 px-4 border-b" tabindex="0">Mateo Morales</td>
+            <td class="py-2 px-4 border-b" tabindex="0">003001652715</td>
+            <td class="py-2 px-4 border-b" tabindex="0">12/12/2023</td>
+            <td class="py-2 px-4 border-b" tabindex="0">$5,50</td>
             <td class="py-2 px-4 border-b">
               <button class="bg-yellow-400 px-2 py-1 rounded"
                 >{i18n.FACTURA.SECCION3.DESCARGAR}</button

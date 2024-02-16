@@ -3,11 +3,15 @@ import { Image } from "astro:assets";
 import LanguageSelector from "./LanguageSelector.astro";
 import logo from "../assets/logo.png";
 
-import { getI18N } from "../i18n/index"
-import { getLangFromUrl, useTranslations, useTranslatedPath, } from '../i18n/utils';
+import { getI18N } from "../i18n/index";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,11 +22,7 @@ const translatePath = useTranslatedPath(lang);
   <nav class="p-4 bg-white shadow md:flex md:items-center md:justify-between">
     <div class="flex justify-between items-center">
       <span class="text-2xl cursor-pointer">
-        <Image
-          class={"w-32"}
-          src={logo}
-          alt={i18n.NAVBAR.LOGO_ALT}
-        />
+        <Image class={"w-32"} src={logo} alt={i18n.NAVBAR.LOGO_ALT} />
       </span>
 
       <span class="cursor-pointer mx-2 md:hidden block">
@@ -30,20 +30,29 @@ const translatePath = useTranslatedPath(lang);
           <i class="fa-solid fa-bars text-3xl"></i>
         </button>
       </span>
-
-      <LanguageSelector />
     </div>
 
     <ul
-      class="md:flex md:items-center z-[-1] md:z-auto md:static bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      class="md:flex md:items-center z-[-1] md:z-auto md:static bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]"
     >
-      <li class="mx-4 my-6 md:my-0"><a href={translatePath('/')}>{t('nav.inicio')}</a></li>
-      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href={translatePath('/')}>{t('nav.viaje')}</a></li>
-      <li class="mx-4 my-6 md:my-0"><a href={translatePath('/factura')}>{t('nav.servicio')}</a></li>
-      <li class="mx-4 my-6 md:my-0">
-        <a href={translatePath('/informacion')}>{t('nav.info')}</a>
+      <li>
+        <LanguageSelector />
       </li>
-      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href={translatePath('#')}>{t('nav.help')}</a></li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href={translatePath("/")}>{t("nav.inicio")}</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0 md:hidden lg:block">
+        <a href={translatePath("/")}>{t("nav.viaje")}</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href={translatePath("/factura")}>{t("nav.servicio")}</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href={translatePath("/informacion")}>{t("nav.info")}</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0 md:hidden lg:block">
+        <a href={translatePath("#")}>{t("nav.help")}</a>
+      </li>
     </ul>
   </nav>
 
