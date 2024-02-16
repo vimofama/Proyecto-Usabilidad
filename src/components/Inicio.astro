@@ -3,51 +3,57 @@ import { Image } from "astro:assets";
 import ambato from "../assets/ambato.png";
 import guayaquil from "../assets/guayaquil.png";
 import manta from "../assets/manta.png";
+
+import { getI18N } from "../i18n/index";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const i18n = getI18N({ currentLocale: lang });
 ---
 
 <main>
   <section class="flex flex-col items-center">
     <h2 class="text-xl font-semibold my-2 lg:text-2xl lg:my-6">
-      Busca tu viaje
+      {i18n.HOME.SECCION1.TITLE}
     </h2>
     <form class="border rounded-md border-black w-80 lg:w-240 lg:h-60">
       <div
         class="flex items-center justify-center lg:justify-start lg:ml-11 lg:mt-4 lg:text-2xl"
       >
         <input class="lg:w-8 lg:h-8 lg:mr-2" id="ida" type="radio" />
-        <label for="ida">Solo ida</label>
+        <label for="ida">{i18n.HOME.SECCION1.IDA}</label>
 
         <input
           class="ml-5 lg:w-8 lg:h-8 lg:mr-2"
           id="ida-vuelta"
           type="radio"
         />
-        <label for="ida-vuelta">Ida y vuelta</label>
+        <label for="ida-vuelta">{i18n.HOME.SECCION1.VUELTA}</label>
       </div>
 
       <div class="flex flex-col lg:flex-row p-2 my-2 lg:mt-11 lg:gap-3">
         <div class="lg:w-1/6 lg:flex-col w-full mb-4">
-          <label for="origen">Origen</label>
+          <label for="origen">{i18n.HOME.SECCION1.ORIGEN}</label>
           <input
             class="border rounded-md border-black mt-2 p-1 lg:h-11"
             id="origen"
             type="text"
-            placeholder="Origen"
+            placeholder={i18n.HOME.SECCION1.ORIGEN}
           />
         </div>
 
         <div class="lg:w-72 lg:flex-col w-full mb-4">
-          <label for="destino">Destino</label>
+          <label for="destino">{i18n.HOME.SECCION1.DESTINO}</label>
           <input
             class="border rounded-md border-black mt-2 p-1 lg:h-11"
             id="destino"
             type="text"
-            placeholder="Destino"
+            placeholder={i18n.HOME.SECCION1.DESTINO}
           />
         </div>
 
         <div class="lg:w-72 lg:flex-col w-full mb-4">
-          <label for="fecha-ida">Fecha ida</label>
+          <label for="fecha-ida">{i18n.HOME.SECCION1.FECHA_IDA}</label>
           <input
             class="border rounded-md border-black mt-2 p-1 lg:h-11"
             id="fecha-ida"
@@ -56,7 +62,7 @@ import manta from "../assets/manta.png";
         </div>
 
         <div class="lg:w-48 lg:flex-col w-full mb-4">
-          <label for="fecha-vuelta">Fecha vuelta</label>
+          <label for="fecha-vuelta">{i18n.HOME.SECCION1.FECHA_VUELTA}</label>
           <input
             class="border rounded-md border-black mt-2 p-1 lg:h-11"
             id="fecha-vuelta"
@@ -65,7 +71,7 @@ import manta from "../assets/manta.png";
         </div>
 
         <div class="lg:w-48 lg:flex-col w-full mb-4">
-          <label for="pasajeros">Pasajeros</label>
+          <label for="pasajeros">{i18n.HOME.SECCION1.PASAJEROS}</label>
           <input
             class="border rounded-md border-black mt-2 p-1 lg:h-11"
             id="pasajeros"
@@ -78,7 +84,7 @@ import manta from "../assets/manta.png";
         <div class="lg:w-48 w-full mb-4">
           <button
             class="bg-yellow-400 rounded-md mt-2 w-24 lg:h-11 lg:mt-8"
-            type="submit">Buscar</button
+            type="submit">{i18n.HOME.SECCION1.BUSCAR}</button
           >
         </div>
       </div>
@@ -89,75 +95,75 @@ import manta from "../assets/manta.png";
   >
     <button
       class="border rounded-md border-black w-52 mt-4 lg:my-1 lg:h-20 lg:w-96 lg:rounded-2xl"
-      ><i class="fa-solid fa-ticket mr-2 rotate-135"></i>Gestionar mi reserva</button
+      ><i class="fa-solid fa-ticket mr-2 rotate-135"></i>{
+        i18n.HOME.SECCION2.BOTON1
+      }</button
     >
     <button
       class="border rounded-md border-black w-52 lg:my-1 lg:h-20 lg:w-96 lg:mx-1 lg:rounded-2xl"
-      ><i class="fa-regular fa-clock mr-2"></i>Tu viaje en tiempo real</button
+      ><i class="fa-regular fa-clock mr-2"></i>{
+        i18n.HOME.SECCION2.BOTON2
+      }</button
     >
     <button
       class="border rounded-md border-black w-52 mb-4 lg:my-1 lg:h-20 lg:w-96 lg:rounded-2xl"
-      ><i class="fa-regular fa-circle-question mr-2"></i>Ayuda</button
+      ><i class="fa-regular fa-circle-question mr-2"></i>{
+        i18n.HOME.SECCION2.BOTON3
+      }</button
     >
   </section>
   <section class="flex flex-col items-center">
     <h2
       class="border rounded-md border-black w-24 text-center font-semibold text-xl mx-auto lg:text-3xl lg:w-40 lg:h-14 lg:py-2 lg:mt-2"
     >
-      Noticias
+      {i18n.HOME.SECCION3.TITLE}
     </h2>
     <div class="w-80 my-2 lg:flex lg:w-240 lg:gap-11 lg:mt-6">
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
       >
-        <Image src={ambato} alt={""} class={"rounded-md lg:h-32"} />
+        <Image
+          src={ambato}
+          alt={i18n.HOME.SECCION3.NOTICIA1.IMG_ALT}
+          class={"rounded-md lg:h-32"}
+        />
         <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
-          Ambato se prepara para recibir el Carnaval 2024
+          {i18n.HOME.SECCION3.NOTICIA1.TITLE}
         </h3>
         <p class="text-justify">
-          Ambato, ubicada en la provincia de Tungurahua, es conocida como la
-          ciudad de las flores por su clima templado y sus hermosas plantaciones
-          de flores. Sin embargo, Ambato ofrece mucho más que eso a los
-          visitantes. La ciudad cuenta con un rico patrimonio histórico y
-          cultural, que se refleja en sus iglesias, museos y centros culturales.
-          También es un importante centro comercial y artesanal, con una gran
-          variedad de tiendas y mercados donde los visitantes pueden encontrar
-          productos de todo tipo.
+          {i18n.HOME.SECCION3.NOTICIA1.DESCRIPCION}
         </p>
       </article>
 
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
       >
-        <Image src={guayaquil} alt={""} class={"rounded-md lg:h-32"} />
+        <Image
+          src={guayaquil}
+          alt={i18n.HOME.SECCION3.NOTICIA2.IMG_ALT}
+          class={"rounded-md lg:h-32"}
+        />
         <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
-          Guayaquil estrena nuevo mirador
+          {i18n.HOME.SECCION3.NOTICIA2.TITLE}
         </h3>
         <p class="text-justify">
-          Guayaquil, la ciudad más grande de Ecuador, es conocida como la Perla
-          del Pacífico por su belleza natural y su vibrante vida cultural. La
-          ciudad cuenta con una costa hermosa, con playas de arena blanca y
-          aguas cristalinas. También alberga una gran variedad de parques y
-          jardines, que ofrecen un oasis de tranquilidad en medio de la
-          bulliciosa ciudad.
+          {i18n.HOME.SECCION3.NOTICIA2.DESCRIPCION}
         </p>
       </article>
 
       <article
         class="border rounded-md border-black my-2 p-4 lg:h-192 lg:px-8 lg:pt-9 lg:w-1/3"
       >
-        <Image src={manta} alt={""} class={"rounded-md lg:h-32"} />
+        <Image
+          src={manta}
+          alt={i18n.HOME.SECCION3.NOTICIA3.IMG_ALT}
+          class={"rounded-md lg:h-32"}
+        />
         <h3 class="text-xl font-semibold text-center my-2 lg:my-5 lg:text-lg">
-          Manta celebra el Festival de la Cultura
+          {i18n.HOME.SECCION3.NOTICIA3.TITLE}
         </h3>
         <p class="text-justify">
-          Manta, ubicada en la provincia de Manabí, es conocida como la ciudad
-          del viento por sus fuertes vientos que son ideales para la práctica de
-          deportes acuáticos como el windsurf y el kitesurf. Sin embargo, Manta
-          ofrece mucho más que eso a los visitantes. La ciudad cuenta con una
-          hermosa playa, con aguas cristalinas y arenas blancas. También alberga
-          una gran variedad de parques y reservas naturales, que ofrecen un
-          refugio para la vida silvestre.
+          {i18n.HOME.SECCION3.NOTICIA3.DESCRIPCION}
         </p>
       </article>
     </div>

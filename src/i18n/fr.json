@@ -1,0 +1,90 @@
+{
+  "NAVBAR": {
+    "LOGO_ALT": "Logo de la Coopérative Reine de la Route",
+    "INICIO": "Accueil",
+    "VIAJE": "Planifiez votre voyage",
+    "SERVICIO": "Service",
+    "INFORMACION": "Informations à jour",
+    "AYUDA": "Aide"
+  },
+  "HOME": {
+    "SECCION1": {
+      "TITLE": "Trouvez votre voyage",
+      "IDA": "Aller simple",
+      "VUELTA": "Aller-retour",
+      "ORIGEN": "Origine",
+      "DESTINO": "Destination",
+      "FECHA_IDA": "Date de départ",
+      "FECHA_VUELTA": "Date de retour",
+      "PASAJEROS": "Passagers",
+      "BUSCAR": "Chercher"
+    },
+    "SECCION2": {
+      "BOTON1": "Gérer ma réservation",
+      "BOTON2": "Votre voyage en temps réel",
+      "BOTON3": "Aide"
+    },
+    "SECCION3": {
+      "TITLE": "Actualités",
+      "NOTICIA1": {
+        "TITLE": "Ambato se prépare à accueillir le Carnaval 2024",
+        "DESCRIPCION": "Ambato, située dans la province de Tungurahua, est connue comme la ville des fleurs pour son climat tempéré et ses belles plantations de fleurs. Cependant, Ambato offre bien plus que cela aux visiteurs. La ville possède un riche patrimoine historique et culturel, reflété dans ses églises, ses musées et ses centres culturels. C'est également un centre commercial et artisanal important, avec une grande variété de magasins et de marchés où les visiteurs peuvent trouver des produits de toutes sortes.",
+        "IMG_ALT": "Ambato se prépare à accueillir le Carnaval 2024"
+      },
+      "NOTICIA2": {
+        "TITLE": "Guayaquil dévoile un nouveau point de vue",
+        "DESCRIPCION": "Guayaquil, la plus grande ville de l'Équateur, est connue sous le nom de Perle du Pacifique pour sa beauté naturelle et sa vie culturelle vibrante. La ville possède une magnifique côte, avec des plages de sable blanc et des eaux cristallines. Elle abrite également une grande variété de parcs et de jardins, offrant une oasis de tranquillité au milieu de l'agitation de la ville.",
+        "IMG_ALT": "Guayaquil dévoile un nouveau point de vue"
+      },
+      "NOTICIA3": {
+        "TITLE": "Manta célèbre le Festival de la Culture",
+        "DESCRIPCION": "Manta, située dans la province de Manabí, est connue sous le nom de ville du vent pour ses vents forts, idéaux pour les sports nautiques tels que la planche à voile et le kitesurf. Cependant, Manta offre bien plus que cela aux visiteurs. La ville possède une belle plage, avec des eaux cristallines et des sables blancs. Elle abrite également une grande variété de parcs et de réserves naturelles, offrant un refuge à la faune sauvage.",
+        "IMG_ALT": "Manta célèbre le Festival de la Culture"
+      }
+    }
+  },
+  "INFORMATION": {
+    "SECCION1": {
+      "TITLE": "Qui sommes-nous / Coopérative Reine de la Route Équateur"
+    },
+    "SECCION2": {
+      "ARTICULO1": {
+        "TITLE": "Mission",
+        "DESCRIPCION": "Fournir un transport interprovincial efficace, adapté aux besoins des utilisateurs nationaux et étrangers, garantissant leur pleine satisfaction à travers des services et des produits différenciés. Nous croyons fermement qu'il est possible de transporter des passagers satisfaits et d'investir de manière permanente pour cela ; la première étape de cette combinaison continue de succès commercial et technologique sera achevée à 100 % dans 10 ans."
+      },
+      "ARTICULO2": {
+        "TITLE": "Vision",
+        "DESCRIPCION": "Être une institution leader, prospère, excellente et prospère dans la prestation de services dans la modalité de transport public interprovincial de passagers, avec efficacité et responsabilité de ses membres, partenaires et employés, offrant des services et des produits différenciés, dans des unités technologiquement modernes, à la recherche du développement social et économique des partenaires et de l'environnement, avec engagement et respect de la nature."
+      },
+      "ARTICULO3": {
+        "TITLE": "Nos Principes",
+        "DESCRIPCION": "Ils sont l'ensemble des attributs minimums indispensables pour mener à bien l'administration avec intégrité et impartialité, et dont les membres et les collaborateurs ont largement fait l'expérience lors d'ateliers et d'expériences, étant ces normes de comportement basées sur nos valeurs institutionnelles, orientées vers l'entraide : responsabilité, démocratie, égalité, équité et solidarité. Suivant la tradition de ses fondateurs, ses membres croient aux valeurs éthiques de l'honnêteté, de la transparence, de la responsabilité sociale et du souci des autres."
+      }
+    },
+    "SECCION3": {
+      "TITLE": "Emplacement"
+    }
+  },
+  "FACTURA": {
+    "SECCION1": {
+      "TITLE": "Générer une facture"
+    },
+    "SECCION2": {
+      "TITLE": "Consulter le voyage",
+      "ORIGEN": "Origine",
+      "DESTINO": "Destination",
+      "NOFAC": "Numéro de facture",
+      "CEDULA": "Numéro d'identité",
+      "CONSULTAR": "Consulter"
+    },
+    "SECCION3": {
+      "TITLE": "Reçus",
+      "NAME": "Nom",
+      "NUMERO": "Numéro",
+      "FECHA": "Date",
+      "VALOR": "Valeur",
+      "DOCUMENTO": "Document",
+      "DESCARGAR": "Télécharger"
+    }
+  }
+}

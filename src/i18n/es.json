@@ -1,0 +1,90 @@
+{
+  "NAVBAR": {
+    "LOGO_ALT": "Logo de la Cooperativa Reina del Camino",
+    "INICIO": "Inicio",
+    "VIAJE": "Planifica tu viaje",
+    "SERVICIO": "Servicio",
+    "INFORMACION": "Información actualizada",
+    "AYUDA": "Ayuda"
+  },
+  "HOME": {
+    "SECCION1": {
+      "TITLE": "Busca tu viaje",
+      "IDA": "Solo ida",
+      "VUELTA": "Ida y vuelta",
+      "ORIGEN": "Origen",
+      "DESTINO": "Destino",
+      "FECHA_IDA": "Fecha ida",
+      "FECHA_VUELTA": "Fecha vuelta",
+      "PASAJEROS": "Pasajeros",
+      "BUSCAR": "Buscar"
+    },
+    "SECCION2": {
+      "BOTON1": "Gestionar mi reserva",
+      "BOTON2": "Tu viaje en tiempo real",
+      "BOTON3": "Ayuda"
+    },
+    "SECCION3": {
+      "TITLE": "Noticias",
+      "NOTICIA1": {
+        "TITLE": "Ambato se prepara para recibir el Carnaval 2024",
+        "DESCRIPCION": "Ambato, ubicada en la provincia de Tungurahua, es conocida como la ciudad de las flores por su clima templado y sus hermosas plantaciones de flores. Sin embargo, Ambato ofrece mucho más que eso a los visitantes. La ciudad cuenta con un rico patrimonio histórico y cultural, que se refleja en sus iglesias, museos y centros culturales. También es un importante centro comercial y artesanal, con una gran variedad de tiendas y mercados donde los visitantes pueden encontrar productos de todo tipo.",
+        "IMG_ALT": "Ambato se prepara para recibir el Carnaval 2024"
+      },
+      "NOTICIA2": {
+        "TITLE": "Guayaquil estrena nuevo mirador",
+        "DESCRIPCION": "Guayaquil, la ciudad más grande de Ecuador, es conocida como la Perla del Pacífico por su belleza natural y su vibrante vida cultural. La ciudad cuenta con una costa hermosa, con playas de arena blanca y aguas cristalinas. También alberga una gran variedad de parques y jardines, que ofrecen un oasis de tranquilidad en medio de la bulliciosa ciudad.",
+        "IMG_ALT": "Guayaquil estrena nuevo mirador"
+      },
+      "NOTICIA3": {
+        "TITLE": "Manta celebra el Festival de la Cultura",
+        "DESCRIPCION": "Manta, ubicada en la provincia de Manabí, es conocida como la ciudad del viento por sus fuertes vientos que son ideales para la práctica de deportes acuáticos como el windsurf y el kitesurf. Sin embargo, Manta ofrece mucho más que eso a los visitantes. La ciudad cuenta con una hermosa playa, con aguas cristalinas y arenas blancas. También alberga una gran variedad de parques y reservas naturales, que ofrecen un refugio para la vida silvestre.",
+        "IMG_ALT": "Manta celebra el Festival de la Cultura"
+      }
+    }
+  },
+  "INFORMATION": {
+    "SECCION1": {
+      "TITLE": "Quienes Somos / Cooperativa Reina del Camino Ecuador"
+    },
+    "SECCION2": {
+      "ARTICULO1": {
+        "TITLE": "Misión",
+        "DESCRIPCION": "Brindar transporte interprovincial eficiente, adecuada a las necesidades de los usuarios nacionales y extranjeros, garantizado su plena satisfacción a través de servicios y productos diferenciados. Creemos firmemente que es posible transportar pasajeros satisfechos e invertimos permanentemente para ello; la primera etapa de esta continua combinación éxito empresarial y tecnología, se concretará el 100% a 10 años"
+      },
+      "ARTICULO2": {
+        "TITLE": "Visión",
+        "DESCRIPCION": "Ser una institución líder, exitosa, de excelencia u próspera en la prestación de servicio en la modalidad de Transporte público Interprovincial de pasajeros, con eficiencia y responsabilidad de sus integrantes. Socios y empleados, entregando servicios y productos diferenciados, en unidades tecnológicamente modernas, en busca del desarrollo social y económico de los asociados y del entorno, con el compromiso y respeto a la naturaleza."
+      },
+      "ARTICULO3": {
+        "TITLE": "Nuestros Principios",
+        "DESCRIPCION": "Son el conjunto de atributos mínimos indispensables para llevar a cabo la administración con integridad e imparcialidad, y de los cuales ampliamente experimentaron socios y colaboradores en los talleres y vi vivencias, siendo estos, los estándares de comportamiento basados en nuestros valores institucionales, orientados a la ayuda mutua: responsabilidad, democracia, igualdad, equidad y solidaridad. Siguiendo la tradición de sus fundadores, sus miembros creen en los valores éticos de honestidad, transparencia, responsabilidad social y preocupación por los demás."
+      }
+    },
+    "SECCION3": {
+      "TITLE": "Ubicación"
+    }
+  },
+  "FACTURA": {
+    "SECCION1": {
+      "TITLE": "Generer Factura"
+    },
+    "SECCION2": {
+      "TITLE": "Consultar viaje",
+      "ORIGEN": "Origen",
+      "DESTINO": "Destino",
+      "NOFAC": "Nro. Factura",
+      "CEDULA": "Cédula",
+      "CONSULTAR": "Consultar"
+    },
+    "SECCION3": {
+      "TITLE": "Comprobantes",
+      "NAME": "Nombre",
+      "NUMERO": "Número",
+      "FECHA": "Fecha",
+      "VALOR": "Valor",
+      "DOCUMENTO": "Documento",
+      "DESCARGAR": "Descargar"
+    }
+  }
+}

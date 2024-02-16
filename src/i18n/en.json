@@ -1,0 +1,90 @@
+{
+  "NAVBAR": {
+    "LOGO_ALT": "Queen of the Road Cooperative Logo",
+    "INICIO": "Home",
+    "VIAJE": "Plan your trip",
+    "SERVICIO": "Service",
+    "INFORMACION": "Updated Information",
+    "AYUDA": "Help"
+  },
+  "HOME": {
+    "SECCION1": {
+      "TITLE": "Find your trip",
+      "IDA": "One way",
+      "VUELTA": "Round trip",
+      "ORIGEN": "Origin",
+      "DESTINO": "Destination",
+      "FECHA_IDA": "Departure date",
+      "FECHA_VUELTA": "Return date",
+      "PASAJEROS": "Passengers",
+      "BUSCAR": "Search"
+    },
+    "SECCION2": {
+      "BOTON1": "Manage my booking",
+      "BOTON2": "Your trip in real time",
+      "BOTON3": "Help"
+    },
+    "SECCION3": {
+      "TITLE": "News",
+      "NOTICIA1": {
+        "TITLE": "Ambato prepares to welcome Carnival 2024",
+        "DESCRIPCION": "Ambato, located in the province of Tungurahua, is known as the city of flowers for its temperate climate and beautiful flower plantations. However, Ambato offers much more than that to visitors. The city boasts a rich historical and cultural heritage, reflected in its churches, museums, and cultural centers. It is also an important commercial and craft center, with a wide variety of shops and markets where visitors can find products of all kinds.",
+        "IMG_ALT": "Ambato prepares to welcome Carnival 2024"
+      },
+      "NOTICIA2": {
+        "TITLE": "Guayaquil unveils new viewpoint",
+        "DESCRIPCION": "Guayaquil, Ecuador's largest city, is known as the Pearl of the Pacific for its natural beauty and vibrant cultural life. The city boasts a beautiful coastline, with white sandy beaches and crystal-clear waters. It also hosts a wide variety of parks and gardens, offering an oasis of tranquility amidst the bustling city.",
+        "IMG_ALT": "Guayaquil unveils new viewpoint"
+      },
+      "NOTICIA3": {
+        "TITLE": "Manta celebrates the Festival of Culture",
+        "DESCRIPCION": "Manta, located in the province of Manabí, is known as the city of wind for its strong winds that are ideal for water sports such as windsurfing and kitesurfing. However, Manta offers much more than that to visitors. The city boasts a beautiful beach, with crystal-clear waters and white sands. It also hosts a wide variety of parks and nature reserves, offering a refuge for wildlife.",
+        "IMG_ALT": "Manta celebrates the Festival of Culture"
+      }
+    }
+  },
+  "INFORMATION": {
+    "SECCION1": {
+      "TITLE": "About Us / Queen of the Road Cooperative Ecuador"
+    },
+    "SECCION2": {
+      "ARTICULO1": {
+        "TITLE": "Mission",
+        "DESCRIPCION": "To provide efficient interprovincial transportation, suitable for the needs of national and foreign users, guaranteeing their full satisfaction through differentiated services and products. We firmly believe that it is possible to transport satisfied passengers and invest permanently for it; the first stage of this continuous combination of business success and technology will be completed 100% in 10 years."
+      },
+      "ARTICULO2": {
+        "TITLE": "Vision",
+        "DESCRIPCION": "To be a leading, successful, excellent, and prosperous institution in the provision of service in the modality of Interprovincial Public Transport of passengers, with efficiency and responsibility of its members, partners, and employees, delivering differentiated services and products, in technologically modern units, in search of social and economic development of the partners and the environment, with commitment and respect for nature."
+      },
+      "ARTICULO3": {
+        "TITLE": "Our Principles",
+        "DESCRIPCION": "They are the set of minimum attributes essential to carry out administration with integrity and impartiality, and of which members and collaborators widely experienced in workshops and experiences, being these, the standards of behavior based on our institutional values, oriented to mutual aid: responsibility, democracy, equality, equity, and solidarity. Following the tradition of its founders, its members believe in the ethical values of honesty, transparency, social responsibility, and concern for others."
+      }
+    },
+    "SECCION3": {
+      "TITLE": "Location"
+    }
+  },
+  "FACTURA": {
+    "SECCION1": {
+      "TITLE": "Generate Invoice"
+    },
+    "SECCION2": {
+      "TITLE": "Consult Trip",
+      "ORIGEN": "Origin",
+      "DESTINO": "Destination",
+      "NOFAC": "Invoice Number",
+      "CEDULA": "ID Number",
+      "CONSULTAR": "Consult"
+    },
+    "SECCION3": {
+      "TITLE": "Receipts",
+      "NAME": "Name",
+      "NUMERO": "Number",
+      "FECHA": "Date",
+      "VALOR": "Value",
+      "DOCUMENTO": "Document",
+      "DESCARGAR": "Download"
+    }
+  }
+}

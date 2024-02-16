@@ -1,55 +1,50 @@
+---
+import { getI18N } from "../i18n/index";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const i18n = getI18N({ currentLocale: lang });
+---
+
 <main class="p-4 lg:px-36 lg:max-w-7xl lg:mx-auto">
   <section>
     <h1
       class="bg-red-600 text-red-50 text-2xl font-semibold p-4 rounded-md text-center"
     >
-      Quienes Somos / Cooperativa Reina del Camino Ecuador
+      {i18n.INFORMATION.SECCION1.TITLE}
     </h1>
   </section>
   <section>
     <article class="my-4 p-2">
-      <h3 class="text-xl font-semibold mb-2">Misión</h3>
+      <h3 class="text-xl font-semibold mb-2">
+        {i18n.INFORMATION.SECCION2.ARTICULO1.TITLE}
+      </h3>
       <p>
-        Brindar transporte interprovincial eficiente, adecuada a las necesidades
-        de los usuarios nacionales y extranjeros, garantizado su plena
-        satisfacción a través de servicios y productos diferenciados. Creemos
-        firmemente que es posible transportar pasajeros satisfechos e invertimos
-        permanentemente para ello; la primera etapa de esta continua combinación
-        éxito empresarial y tecnología, se concretará el 100% a 10 años
+        {i18n.INFORMATION.SECCION2.ARTICULO1.DESCRIPCION}
       </p>
     </article>
     <article class="my-4 p-2">
-      <h3 class="text-xl font-semibold mb-2">Visión</h3>
+      <h3 class="text-xl font-semibold mb-2">
+        {i18n.INFORMATION.SECCION2.ARTICULO2.TITLE}
+      </h3>
       <p>
-        Ser una institución líder, exitosa, de excelencia u próspera en la
-        prestación de servicio en la modalidad de Transporte público
-        Interprovincial de pasajeros, con eficiencia y responsabilidad de sus
-        integrantes. Socios y empleados, entregando servicios y productos
-        diferenciados, en unidades tecnológicamente modernas, en busca del
-        desarrollo social y económico de los asociados y del entorno, con el
-        compromiso y respeto a la naturaleza.
+        {i18n.INFORMATION.SECCION2.ARTICULO2.DESCRIPCION}
       </p>
     </article>
     <article class="my-4 p-2">
-      <h3 class="text-xl font-semibold mb-2">Nuestros Principios</h3>
+      <h3 class="text-xl font-semibold mb-2">
+        {i18n.INFORMATION.SECCION2.ARTICULO3.TITLE}
+      </h3>
       <p>
-        Son el conjunto de atributos mínimos indispensables para llevar a cabo
-        la administración con integridad e imparcialidad, y de los cuales
-        ampliamente experimentaron socios y colaboradores en los talleres y vi
-        vivencias, siendo estos, los estándares de comportamiento basados en
-        nuestros valores institucionales, orientados a la ayuda mutua:
-        responsabilidad, democracia, igualdad, equidad y solidaridad. Siguiendo
-        la tradición de sus fundadores, sus miembros creen en los valores éticos
-        de honestidad, transparencia, responsabilidad social y preocupación por
-        los demás.
+        {i18n.INFORMATION.SECCION2.ARTICULO3.DESCRIPCION}
       </p>
     </article>
   </section>
   <section>
     <h2
-      class="border rounded-md border-black w-24 text-center font-semibold text-xl mb-4 mx-auto lg:my-4"
+      class="border rounded-md border-black w-32 text-center font-semibold text-xl mb-4 mx-auto lg:my-4"
     >
-      Ubicación
+      {i18n.INFORMATION.SECCION3.TITLE}
     </h2>
     <iframe
       class="rounded-lg mx-auto w-96 h-96 md:w-176 lg:w-full"

@@ -1,39 +1,47 @@
+---
+import { getI18N } from "../i18n/index";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const i18n = getI18N({ currentLocale: lang });
+---
+
 <main class="p-4 max-w-sm md:max-w-3xl mx-auto lg:max-w-6xl">
   <section>
     <h1
       class="bg-red-600 text-red-50 text-2xl font-semibold p-4 rounded-md text-center"
     >
-      Generar Factura
+      {i18n.FACTURA.SECCION1.TITLE}
     </h1>
   </section>
 
   <section class="my-4">
-    <h2 class="text-2xl font-bold mb-4">Consultar viaje</h2>
+    <h2 class="text-2xl font-bold mb-4">{i18n.FACTURA.SECCION2.TITLE}</h2>
     <form class="border rounded-md border-black w-full mx-auto">
       <div>
         <div class="flex flex-col lg:flex-row p-2 my-2">
           <div class="lg:w-1/2 w-full mb-4">
-            <label for="origen">Origen</label>
+            <label for="origen">{i18n.FACTURA.SECCION2.ORIGEN}</label>
             <input
               class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
               id="origen"
               type="text"
-              placeholder="Origen"
+              placeholder={i18n.FACTURA.SECCION2.ORIGEN}
             />
           </div>
 
           <div class="lg:w-1/2 w-full mb-4">
-            <label for="destino">Destino</label>
+            <label for="destino">{i18n.FACTURA.SECCION2.DESTINO}</label>
             <input
               class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
               id="destino"
               type="text"
-              placeholder="Destino"
+              placeholder={i18n.FACTURA.SECCION2.DESTINO}
             />
           </div>
 
           <div class="lg:w-1/2 w-full mb-4">
-            <label for="factura">Nro. Factura</label>
+            <label for="factura">{i18n.FACTURA.SECCION2.NOFAC}</label>
             <input
               class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
               id="factura"
@@ -44,7 +52,7 @@
           </div>
 
           <div class="lg:w-1/2 w-full mb-2">
-            <label for="cedula">Cédula</label>
+            <label for="cedula">{i18n.FACTURA.SECCION2.CEDULA}</label>
             <input
               class="border rounded-md border-black mt-2 p-1 w-full lg:w-60"
               id="cedula"
@@ -60,7 +68,7 @@
             class="bg-yellow-400 rounded-md mt-2 w-48 my-2 md:h-8"
             type="submit"
           >
-            Consultar
+            {i18n.FACTURA.SECCION2.CONSULTAR}
           </button>
         </div>
       </div>
@@ -68,16 +76,17 @@
   </section>
 
   <section class="my-4 p-4 overflow-x-auto">
-    <h2 class="text-2xl font-bold mb-4">Comprobantes</h2>
+    <h2 class="text-2xl font-bold mb-4">{i18n.FACTURA.SECCION3.TITLE}</h2>
     <div class="w-full overflow-x-auto">
       <table class="min-w-full bg-white border border-gray-300 text-center">
         <thead>
           <tr>
-            <th class="py-2 px-4 border-b">Nombre</th>
-            <th class="py-2 px-4 border-b">Número</th>
-            <th class="py-2 px-4 border-b">Fecha</th>
-            <th class="py-2 px-4 border-b">Valor</th>
-            <th class="py-2 px-4 border-b">Documento</th>
+            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.NAME}</th>
+            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.NUMERO}</th>
+            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.FECHA}</th>
+            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.VALOR}</th>
+            <th class="py-2 px-4 border-b">{i18n.FACTURA.SECCION3.DOCUMENTO}</th
+            >
           </tr>
         </thead>
         <tbody>
@@ -87,7 +96,9 @@
             <td class="py-2 px-4 border-b">12/12/2023</td>
             <td class="py-2 px-4 border-b">$5,50</td>
             <td class="py-2 px-4 border-b">
-              <button class="bg-yellow-400 px-2 py-1 rounded">Descargar</button>
+              <button class="bg-yellow-400 px-2 py-1 rounded"
+                >{i18n.FACTURA.SECCION3.DESCARGAR}</button
+              >
             </td>
           </tr>
         </tbody>

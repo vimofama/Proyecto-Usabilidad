@@ -1,6 +1,17 @@
 ---
 import { Image } from "astro:assets";
+import LanguageSelector from "./LanguageSelector.astro";
 import logo from "../assets/logo.png";
+
+import { getI18N } from "../i18n/index"
+import { getLangFromUrl, useTranslations, useTranslatedPath, } from '../i18n/utils';
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header class="p-4 lg:px-8 lg:text-xl lg:py-4">
@@ -10,7 +21,7 @@ import logo from "../assets/logo.png";
         <Image
           class={"w-32"}
           src={logo}
-          alt={"Logo de la Cooperativa Reina del Camino"}
+          alt={i18n.NAVBAR.LOGO_ALT}
         />
       </span>
 
@@ -19,18 +30,20 @@ import logo from "../assets/logo.png";
           <i class="fa-solid fa-bars text-3xl"></i>
         </button>
       </span>
+
+      <LanguageSelector />
     </div>
 
     <ul
       class="md:flex md:items-center z-[-1] md:z-auto md:static bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
     >
-      <li class="mx-4 my-6 md:my-0"><a href="/">Inicio</a></li>
-      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href="/">Planifica tu viaje</a></li>
-      <li class="mx-4 my-6 md:my-0"><a href="/factura">Servicio</a></li>
+      <li class="mx-4 my-6 md:my-0"><a href={translatePath('/')}>{t('nav.inicio')}</a></li>
+      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href={translatePath('/')}>{t('nav.viaje')}</a></li>
+      <li class="mx-4 my-6 md:my-0"><a href={translatePath('/factura')}>{t('nav.servicio')}</a></li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="/informacion">Informacion actualizada</a>
+        <a href={translatePath('/informacion')}>{t('nav.info')}</a>
       </li>
-      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href="#">Ayuda</a></li>
+      <li class="mx-4 my-6 md:my-0 md:hidden lg:block"><a href={translatePath('#')}>{t('nav.help')}</a></li>
     </ul>
   </nav>
 
